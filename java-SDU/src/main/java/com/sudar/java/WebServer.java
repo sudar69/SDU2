@@ -7,6 +7,9 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
+import com.sudar.java.marshaller.MarshallerToXML;
+import com.sudar.java.model.StartPage;
+
 /**
  * Class <code>WebServer</code> - Main class that starts the Web Server Thread Pool in port 8080 (default)
  */
@@ -19,6 +22,13 @@ public class WebServer extends Thread {
 	private static final int N_THREADS = 3;
 
 	public static void main(String args[]) {
+		try {
+			MarshallerToXML.marshaller(new StartPage());
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		try {
 			new WebServer().start(getValidPortParam(args));
 		} catch (Exception e) {
