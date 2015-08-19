@@ -6,12 +6,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.sudar.java.WebServer;
 import com.sudar.java.marshaller.MarshallerToXML;
 import com.sudar.java.model.StartPage;
 
@@ -40,12 +44,19 @@ public class HttpResponse {
 				try {
 					fillHeaders(Status._200);
 					// TODO fix dir bug http://localhost:8080/src/test
+					headers.add(ContentType.HTML.toString());
+					Map gets = splitQuery(new URL("http://127.0.0.1" + req.uri));
+					log.info(gets);
+					if (req.uri.equals("/") ) {
+						MarshallerToXML XML = new MarshallerToXML();					
+						StartPage startPage = new StartPage();					
+						fillResponse(XML.marshaller(startPage));
+					} else {
+						log.info("File not found:" + req.uri);
+						fillHeaders(Status._404);
+						fillResponse(Status._404.toString());
+					}
 					
-					MarshallerToXML XML = new MarshallerToXML();
-					
-					StartPage startPage = new StartPage();
-					
-					fillResponse(XML.marshaller(startPage));
 
 					/*File file = new File("." + req.uri);
 					if (file.isDirectory()) {
@@ -159,5 +170,16 @@ public class HttpResponse {
 		} catch (Exception e) {
 			log.error("ContentType not found: " + e, e);
 		}
+	}
+	
+	public static Map<String, String> splitQuery(URL url) throws UnsupportedEncodingException {
+	    Map<String, String> query_pairs = new LinkedHashMap<String, String>();
+	    String query = url.getQuery();
+	    String[] pairs = query.split("&");
+	    for (String pair : pairs) {
+	        int idx = pair.indexOf("=");
+	        query_pairs.put(URLDecoder.decode(pair.substring(0, idx), "UTF-8"), URLDecoder.decode(pair.substring(idx + 1), "UTF-8"));
+	    }
+	    return query_pairs;
 	}
 }

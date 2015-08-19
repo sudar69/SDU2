@@ -11,7 +11,8 @@
 	  <xsl:for-each select="menu/items">
 	  <tr> 
 	    <td> 
-	      <p><xsl:value-of select="title" /></p>
+	      <xsl:variable name="NAME"><xsl:value-of select="url" /></xsl:variable>
+	      <p><a href="{$NAME}"><xsl:value-of select="title" /></a></p>
 	    </td>
 	  </tr>
 	  </xsl:for-each>
