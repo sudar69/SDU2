@@ -5,22 +5,16 @@
 	<html>
 	<head>
 	<title>Untitled Document</title>
-
-	</head>
-	
+	</head>	
 	<body bgcolor="#FFFFFF" text="#000000">
 	<table width="400" border="0" cellspacing="0" cellpadding="0" align="center">
+	  <xsl:for-each select="menu/items">
 	  <tr> 
-	    <td width="227" height="252"> 
-	      <p><a href="http://href?type=openInputData"><xsl:value-of select="files" /></a></p>
-	      <p><a href="http://href?type=createNewInputData"><xsl:value-of select="createFile" /></a></p>
-	      <p>—оздать табличную функцию:</p>
-	      <ul>
-	        <li><a href="http://href?type=createTableFunction1">функцию одного аргумента</a></li>
-	        <li><a href="http://href?type=createTableFunction2">функцию двух аргументов</a></li>
-	      </ul>
+	    <td> 
+	      <p><xsl:value-of select="title" /></p>
 	    </td>
 	  </tr>
+	  </xsl:for-each>
 	</table>
 	</body>
 	</html>

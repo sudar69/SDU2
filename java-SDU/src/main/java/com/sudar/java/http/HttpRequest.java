@@ -33,9 +33,9 @@ public class HttpRequest {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		reader2 = reader;
         String str = reader.readLine();
-		if (!str.equals("")) parseRequestLine(str);
+		if (str != null && !str.equals("")) parseRequestLine(str);
 
-		while (!str.equals("")) {
+		while (str != null && !str.equals("")) {
 			str = reader.readLine();
 			parseRequestHeader(str);
 		}

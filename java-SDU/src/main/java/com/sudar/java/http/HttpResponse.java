@@ -11,6 +11,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.sudar.java.WebServer;
+import com.sudar.java.marshaller.MarshallerToXML;
+import com.sudar.java.model.StartPage;
+
 
 /**
  * HttpResponse class defines the HTTP Response Status Line (method, URI, version) 
@@ -27,7 +31,7 @@ public class HttpResponse {
 	byte[] body;
 
 	public HttpResponse(HttpRequest req) throws IOException {
-
+		if (req.method != null) 
 		switch (req.method) {
 			case HEAD:
 				fillHeaders(Status._200);
@@ -36,7 +40,14 @@ public class HttpResponse {
 				try {
 					fillHeaders(Status._200);
 					// TODO fix dir bug http://localhost:8080/src/test
-					File file = new File("." + req.uri);
+					
+					MarshallerToXML XML = new MarshallerToXML();
+					
+					StartPage startPage = new StartPage();
+					
+					fillResponse(XML.marshaller(startPage));
+
+					/*File file = new File("." + req.uri);
 					if (file.isDirectory()) {
 						headers.add(ContentType.HTML.toString());
 						StringBuilder result = new StringBuilder("<html><head><title>Index of ");
@@ -59,7 +70,7 @@ public class HttpResponse {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);
 						fillResponse(Status._404.toString());
-					}
+					}*/
 				} catch (Exception e) {
 					log.error("Response Error", e);
 					fillHeaders(Status._400);
