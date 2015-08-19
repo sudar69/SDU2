@@ -16,6 +16,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
 import com.sudar.java.model.StartPage;
 
@@ -51,6 +52,15 @@ public class HttpResponse {
 						MarshallerToXML XML = new MarshallerToXML();					
 						StartPage startPage = new StartPage();					
 						fillResponse(XML.marshaller(startPage));
+					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("create")) {
+						MarshallerToXML XML = new MarshallerToXML();					
+						StartPage startPage = new StartPage();					
+						fillResponse(XML.marshaller(startPage));
+					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("openfunc")) {
+						LoadXmlToObject ob = new LoadXmlToObject();					
+						ob.loadXML();	
+						//ob.saveXML();
+						fillResponse("");
 					} else {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);
@@ -175,11 +185,15 @@ public class HttpResponse {
 	public static Map<String, String> splitQuery(URL url) throws UnsupportedEncodingException {
 	    Map<String, String> query_pairs = new LinkedHashMap<String, String>();
 	    String query = url.getQuery();
-	    String[] pairs = query.split("&");
-	    for (String pair : pairs) {
-	        int idx = pair.indexOf("=");
-	        query_pairs.put(URLDecoder.decode(pair.substring(0, idx), "UTF-8"), URLDecoder.decode(pair.substring(idx + 1), "UTF-8"));
+	    if (query != null) {
+		    String[] pairs = query.split("&");
+		    for (String pair : pairs) {
+		        int idx = pair.indexOf("=");
+		        query_pairs.put(URLDecoder.decode(pair.substring(0, idx), "UTF-8"), URLDecoder.decode(pair.substring(idx + 1), "UTF-8"));
+		    }
+		    return query_pairs;
+	    } else {
+	    	return null;
 	    }
-	    return query_pairs;
 	}
 }

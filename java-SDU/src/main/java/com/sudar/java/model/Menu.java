@@ -9,26 +9,22 @@ public class Menu {
 	private List<MenuItem> items = new ArrayList<MenuItem>();
 	
 	public Menu() {
-		MenuItem book1 = new MenuItem();
-        book1.setTitle("Открыть файл");
-        book1.setUrl("open");
- 
-        MenuItem book2 = new MenuItem();
-        book2.setTitle("Создать новый файл с исходными данными");
-        book2.setUrl("createfile");
-        
-        MenuItem book3 = new MenuItem();
-        book3.setTitle("Создать функцию одного аргумента");
-        book3.setUrl("createfunc1");
-        
-        MenuItem book4 = new MenuItem();
-        book4.setTitle("Создать функцию двух аргументов");
-        book4.setUrl("createfunc2");
-         
-        items.add(book1);
-        items.add(book2);
-        items.add(book3);
-        items.add(book4);
+		
+		String[][] data = {
+				{ "Открыть файл", "openfile" },
+				{ "Открыть функцию", "openfunc" },
+				{ "Создать новый файл с исходными данными", "createfile" },
+				{ "Создать функцию одного аргумента", "createfunc1" },
+				{ "Создать функцию двух аргументов", "createfunc2" }};
+	    for (String s[] : data) {
+	      
+	      MenuItem book1 = new MenuItem();
+	      book1.setTitle(s[0]);
+	      book1.setUrl(s[1]);
+	      
+	      items.add(book1);
+	    }
+		
 	}
 	
     @XmlElement(name="items")
