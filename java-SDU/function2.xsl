@@ -8,32 +8,40 @@
 					<title>Табличная функция Cx(delta,Mtau)</title>
 				</head>
 				<body bgcolor="#FFFFFF" text="#000000">
-					<form name="form1" method="post" action="http:\\ya.ru">
+					<form name="form1" method="get" action="/">
 						<p align="center">
 							<input type="submit" name="save" value="Сохранить" />
 							<input type="submit" name="saveAs" value="Сохранить как" />
-							<input type="submit" name="addRow" value="Добавить строку" />
+							<input type="submit" name="action" value="addrow" />
 							<input type="submit" name="deleteRow" value="Удалить строку" />
 							<input type="submit" name="addColumn" value="Добавить столбец" />
 							<input type="submit" name="deleteColumn" value="Удалить столбец" />
 							<input type="submit" name="close" value="Закрыть" />
 						</p>
+						<xsl:variable name="namet" select="name" />
+						<xsl:variable name="fn1" select="nameFirstArgument" />
+						<xsl:variable name="fn2" select="nameSecondArgument" />
+						<xsl:variable name="descr" select="description" />
 						<p align="left">
+							<input type="hidden" name="controller" value="func" />
+							<input type="hidden" name="view" value="f2" />
+							Имя второго аргумента
+							<xsl:variable name="DESCRIP">
+								<xsl:value-of select="description" />
+							</xsl:variable>							
+							<input type="hidden" name="fname" value="{$DESCRIP}" />
 							<input type="hidden" name="type" value="tableFunction" />
 							<input type="hidden" name="argumentNum" value="2" />
 						</p>
 						<p>Cx(delta,Mtau)
 						</p>
 						<p>
-							<xsl:value-of select="description" />
+							<xsl:value-of select="$descr" />
 						</p>
 						<p>
 							<input type="hidden" name="x1Num" value="9" />
 							<input type="hidden" name="x2Num" value="10" />
-						</p>
-						<xsl:variable name="namet" select="name" />
-						<xsl:variable name="fn1" select="nameFirstArgument" />
-						<xsl:variable name="fn2" select="nameSecondArgument" />
+						</p>						
 						<table border="1" cellspacing="1" cellpadding="1">
 							<xsl:for-each select="row">
 								<tr>

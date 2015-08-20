@@ -16,6 +16,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.sudar.java.controller.FunctionController;
 import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
 import com.sudar.java.model.Menu;
@@ -52,17 +53,19 @@ public class HttpResponse {
 						MarshallerToXML XML = new MarshallerToXML();
 						Menu catalog = new Menu();
 						fillResponse(XML.marshaller(catalog, "index.xsl"));
-					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("create")) {
+					} else if (gets != null && gets.get("controller") != null && gets.get("controller").equals("create")) {
 						MarshallerToXML XML = new MarshallerToXML();
 						Menu catalog = new Menu();
 						fillResponse(XML.marshaller(catalog, "index.xsl"));
-					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("openfunc")) {
-						LoadXmlToObject ob = new LoadXmlToObject();	
+					} else if (gets != null && gets.get("controller") != null && gets.get("controller").equals("func")) {
+						FunctionController fc = new FunctionController(gets);
+						fillResponse(fc.func());
+						//LoadXmlToObject ob = new LoadXmlToObject();	
 						//ob.saveXML();
 						//fillResponse("");
-						MarshallerToXML XML = new MarshallerToXML();
+						//MarshallerToXML XML = new MarshallerToXML();
 						//fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "functionsList.xsl"));
-						fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "function.xsl"));
+						//fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "function.xsl"));
 					} else {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);

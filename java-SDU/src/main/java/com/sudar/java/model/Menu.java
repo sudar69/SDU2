@@ -11,7 +11,7 @@ public class Menu {
 	public Menu() {
 		
 		String[][] data = {
-				{ "Открыть файл", "openfile" },
+				{ "Открыть файл", "?action=func" },
 				{ "Открыть функцию", "openfunc" },
 				{ "Создать новый файл с исходными данными", "createfile" },
 				{ "Создать функцию одного аргумента", "createfunc1" },
