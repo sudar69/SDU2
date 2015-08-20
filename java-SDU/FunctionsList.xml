@@ -1,57 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <functionsList>
     <function>
-        <description>Cx(alpha Mtau) for 120M</description>
+        <description>Cx(alpha Mtau) for 120M2</description>
         <name>Cx</name>
         <nameFirstArgument>delta</nameFirstArgument>
+        <row>
+            <coll>
+                <cell>
+                    <value>0.16</value>
+                </cell>
+                <index>0.5</index>
+            </coll>
+            <index>0.0</index>
+        </row>
         <type>f2</type>
-        <x1>255.0</x1>
-        <x1>255.0</x1>
-        <x1>0.0</x1>
-        <x2>255.0</x2>
-        <x2>255.0</x2>
-        <x2>0.0</x2>
-        <y1>
-            <item>-9.0</item>
-            <item>1.0</item>
-            <item>0.0</item>
-        </y1>
-        <y1>
-            <item>4.0</item>
-            <item>1.0</item>
-            <item>1.0</item>
-        </y1>
-        <y1>
-            <item>-2.0</item>
-            <item>2.0</item>
-            <item>-1.0</item>
-        </y1>
     </function>
     <function>
         <description>Cx(alpha Mtau) for 120M2</description>
         <name>Cx</name>
         <nameFirstArgument>delta</nameFirstArgument>
+        <row>
+            <coll>
+                <cell>
+                    <value>0.16</value>
+                </cell>
+                <index>0.5</index>
+            </coll>
+            <index>0.0</index>
+        </row>
         <type>f2</type>
-        <x1>255.0</x1>
-        <x1>255.0</x1>
-        <x1>0.0</x1>
-        <x2>255.0</x2>
-        <x2>255.0</x2>
-        <x2>0.0</x2>
-        <y1>
-            <item>-9.0</item>
-            <item>1.0</item>
-            <item>0.0</item>
-        </y1>
-        <y1>
-            <item>4.0</item>
-            <item>1.0</item>
-            <item>1.0</item>
-        </y1>
-        <y1>
-            <item>-2.0</item>
-            <item>2.0</item>
-            <item>-1.0</item>
-        </y1>
     </function>
 </functionsList>

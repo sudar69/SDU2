@@ -1,15 +1,20 @@
 package com.sudar.java.marshaller;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import com.sudar.java.model.Cell;
+import com.sudar.java.model.Coll;
 import com.sudar.java.model.Function;
 import com.sudar.java.model.FunctionsList;
 import com.sudar.java.model.MenuItem;
+import com.sudar.java.model.Row;
 
 public class LoadXmlToObject {
 
@@ -39,11 +44,19 @@ public class LoadXmlToObject {
 		book1.setType("f2");
 		book1.setDescription("Cx(alpha Mtau) for 120M");
 		book1.setNameFirstArgument("delta");
-		float[] x1 = { 255, 255, 0 };
-		float[][] matrixB = { { -9, 1, 0 }, { 4, 1, 1 }, { -2, 2, -1 } };
-		book1.setX1(x1);
-		book1.setX2(x1);
-		book1.setY1(matrixB);
+		
+		Cell cell1 = new Cell();
+		cell1.setValue(0.16);
+		
+		Coll coll1 = new Coll();
+		coll1.setIndex(0.5);
+		coll1.setCell(cell1);
+		Row row1 = new Row();
+		row1.setIndex(0);
+		row1.getColl().add(coll1);
+		
+		List<Row> table = book1.getRow();
+		table.add(row1);
 
 		customer.getFunctions().add(book1);
 		book1.setDescription("Cx(alpha Mtau) for 120M2");

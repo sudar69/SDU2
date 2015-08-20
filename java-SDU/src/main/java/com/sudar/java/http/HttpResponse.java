@@ -57,10 +57,12 @@ public class HttpResponse {
 						Menu catalog = new Menu();
 						fillResponse(XML.marshaller(catalog, "index.xsl"));
 					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("openfunc")) {
-						LoadXmlToObject ob = new LoadXmlToObject();					
-						MarshallerToXML XML = new MarshallerToXML();
+						LoadXmlToObject ob = new LoadXmlToObject();	
 						//ob.saveXML();
-						fillResponse(XML.marshaller(ob.loadFunctionsList(), "functionsList.xsl"));
+						//fillResponse("");
+						MarshallerToXML XML = new MarshallerToXML();
+						//fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "functionsList.xsl"));
+						fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "function.xsl"));
 					} else {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);

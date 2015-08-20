@@ -1,5 +1,13 @@
 package com.sudar.java.model;
 
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import java.util.ArrayList;
+
+@XmlRootElement
 public class Function {
 		
 	private String name;
@@ -12,9 +20,7 @@ public class Function {
 	
 	private String nameSecondArgument;
 	
-	private float x1[];
-	private float x2[];
-	private float y1[][];
+	private List<Row> row  = new ArrayList<Row>();
 
 	public String getName() {
 		return name;
@@ -56,28 +62,17 @@ public class Function {
 		this.nameSecondArgument = nameSecondArgument;
 	}
 
-	public float[] getX1() {
-		return x1;
+	public List<Row> getRow() {
+		return row;
 	}
 
-	public void setX1(float x1[]) {
-		this.x1 = x1;
-	}
-
-	public float[] getX2() {
-		return x2;
-	}
-
-	public void setX2(float x2[]) {
-		this.x2 = x2;
-	}
-
-	public float[][] getY1() {
-		return y1;
-	}
-
-	public void setY1(float y1[][]) {
-		this.y1 = y1;
+	public void setRow(List<Row> row) {
+		this.row = row;
 	}
 	
+	@XmlElement(name="size")
+	public int getSizeRow() {
+		return row.size();
+	}
+
 }
