@@ -1,22 +1,18 @@
 package com.sudar.java.marshaller;
 
-import com.sudar.java.model.Menu;
-import com.sudar.java.model.MenuItem;
-import com.sudar.java.model.StartPage;
-
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-
-import javax.xml.bind.*;
 import javax.xml.bind.util.JAXBSource;
 import javax.xml.transform.*;
 import javax.xml.transform.stream.*;
-import java.io.IOException;
+
+import com.sudar.java.model.FunctionsList;
+import com.sudar.java.model.Menu;
+
 import java.io.StringWriter;
 
 public class MarshallerToXML {
     
-	public String marshaller(StartPage startPage) throws Exception {
+	public String marshaller(Object contentObject, String fileId) throws Exception {
         // Create Transformer
         /*TransformerFactory tf = TransformerFactory.newInstance();
         StreamSource xslt = new StreamSource("index.xsl");
@@ -35,16 +31,16 @@ public class MarshallerToXML {
         transformer.transform(source, result);
         return writer.toString();*/
          
-        Menu catalog = new Menu();
+        
  
         // Create Transformer
         TransformerFactory tf = TransformerFactory.newInstance();
-        StreamSource xslt = new StreamSource("index.xsl");
+        StreamSource xslt = new StreamSource(fileId);
         Transformer transformer = tf.newTransformer(xslt);
  
         // Source
-        JAXBContext jc = JAXBContext.newInstance(Menu.class);
-        JAXBSource source = new JAXBSource(jc, catalog);
+        JAXBContext jc = JAXBContext.newInstance(Menu.class, FunctionsList.class);
+        JAXBSource source = new JAXBSource(jc, contentObject);
  
         // Result
         StringWriter writer = new StringWriter();

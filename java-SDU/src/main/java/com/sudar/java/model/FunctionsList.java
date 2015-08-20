@@ -9,10 +9,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class FunctionsList {
 	
-	private List<Function> functions = new ArrayList<Function>();
+	private List<Function> function = new ArrayList<Function>();
 	
-	@XmlElement(name="functions")
+	@XmlElement(name="function")
     public List<Function> getFunctions() {
-        return functions;
+        return function;
     }
 }

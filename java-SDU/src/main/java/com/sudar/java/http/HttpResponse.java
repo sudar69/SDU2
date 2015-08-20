@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 
 import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
-import com.sudar.java.model.StartPage;
+import com.sudar.java.model.Menu;
 
 
 /**
@@ -49,18 +49,18 @@ public class HttpResponse {
 					Map gets = splitQuery(new URL("http://127.0.0.1" + req.uri));
 					log.info(gets);
 					if (req.uri.equals("/") ) {
-						MarshallerToXML XML = new MarshallerToXML();					
-						StartPage startPage = new StartPage();					
-						fillResponse(XML.marshaller(startPage));
+						MarshallerToXML XML = new MarshallerToXML();
+						Menu catalog = new Menu();
+						fillResponse(XML.marshaller(catalog, "index.xsl"));
 					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("create")) {
-						MarshallerToXML XML = new MarshallerToXML();					
-						StartPage startPage = new StartPage();					
-						fillResponse(XML.marshaller(startPage));
+						MarshallerToXML XML = new MarshallerToXML();
+						Menu catalog = new Menu();
+						fillResponse(XML.marshaller(catalog, "index.xsl"));
 					} else if (gets != null && gets.get("action") != null && gets.get("action").equals("openfunc")) {
 						LoadXmlToObject ob = new LoadXmlToObject();					
-						ob.loadXML();	
+						MarshallerToXML XML = new MarshallerToXML();
 						//ob.saveXML();
-						fillResponse("");
+						fillResponse(XML.marshaller(ob.loadFunctionsList(), "functionsList.xsl"));
 					} else {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);
