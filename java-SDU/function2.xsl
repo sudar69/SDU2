@@ -6,17 +6,60 @@
 			<html>
 				<head>
 					<title>Табличная функция Cx(delta,Mtau)</title>
+					<style>
+						* {
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						box-sizing: border-box;
+						}
+						.btn {
+						display: inline-block;
+						padding: 6px 12px;
+						margin-bottom: 0;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 1.42857143;
+						text-align: center;
+						white-space: nowrap;
+						vertical-align: middle;
+						-ms-touch-action: manipulation;
+						touch-action: manipulation;
+						cursor: pointer;
+						-webkit-user-select: none;
+						-moz-user-select: none;
+						-ms-user-select: none;
+						user-select: none;
+						background-image: none;
+						border: 1px solid transparent;
+						border-radius: 4px;
+						}
+						.btn-default {
+						color: #333;
+						background-color: #fff;
+						border-color: #ccc;
+						text-decoration: none;
+						}
+						.btn:hover {
+						background-color: #f9f2f4;
+						}
+						input[type=button], input[type=reset], input[type=submit] {
+						-webkit-appearance: button;
+						cursor: pointer;
+						}
+					</style>
 				</head>
 				<body bgcolor="#FFFFFF" text="#000000">
 					<form name="form1" method="get" action="/">
 						<p align="center">
-							<input type="submit" name="save" value="Сохранить" />
-							<input type="submit" name="saveAs" value="Сохранить как" />
-							<input type="submit" name="action" value="addrow" />
+							<input class="btn btn-default" type="submit" name="action"
+								value="save" />
+							<input class="btn btn-default" type="submit" name="action"
+								value="addrow" />
 							<input type="submit" name="deleteRow" value="Удалить строку" />
 							<input type="submit" name="addColumn" value="Добавить столбец" />
 							<input type="submit" name="deleteColumn" value="Удалить столбец" />
-							<input type="submit" name="close" value="Закрыть" />
+							<a class="btn btn-default" href="/?controller=func" role="button">Закрыть
+							</a>
 						</p>
 						<xsl:variable name="namet" select="name" />
 						<xsl:variable name="fn1" select="nameFirstArgument" />
@@ -25,10 +68,9 @@
 						<p align="left">
 							<input type="hidden" name="controller" value="func" />
 							<input type="hidden" name="view" value="f2" />
-							Имя второго аргумента
 							<xsl:variable name="DESCRIP">
 								<xsl:value-of select="description" />
-							</xsl:variable>							
+							</xsl:variable>
 							<input type="hidden" name="fname" value="{$DESCRIP}" />
 							<input type="hidden" name="type" value="tableFunction" />
 							<input type="hidden" name="argumentNum" value="2" />
@@ -41,65 +83,82 @@
 						<p>
 							<input type="hidden" name="x1Num" value="9" />
 							<input type="hidden" name="x2Num" value="10" />
-						</p>						
+						</p>
 						<table border="1" cellspacing="1" cellpadding="1">
 							<xsl:for-each select="row">
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<xsl:for-each select="coll">
-										<td>
-											<div align="center">
-												<input type="checkbox" name="checkboxX20" value="checkbox" />
-											</div>
-										</td>
-									</xsl:for-each>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td>
-										<div align="center">
-											<xsl:value-of select="$fn2" />
-										</div>
-									</td>
-									<xsl:for-each select="coll">
-										<td>
-											<div align="center">
-												<xsl:variable name="level1Count" select="position()" />
-												<xsl:value-of select="$level1Count" />
-											</div>
-										</td>
-									</xsl:for-each>
-								</tr>
-								<tr>
-									<td></td>
-									<td>
-										<div align="center">
-											<xsl:value-of select="$fn1" />
-										</div>
-									</td>
-									<td>
-										<div align="center">
-											<xsl:value-of select="$namet" />
-										</div>
-									</td>
-									<xsl:for-each select="coll">
-										<td width="15" bgcolor="#00FFFF" height="10">
-											<div align="center">
-												<xsl:variable name="TCOLL">
-													<xsl:value-of select="index" />
+								<xsl:variable name="rowP">
+									<xsl:value-of select="position()" />
+								</xsl:variable>
+								<xsl:variable name="rowCount" select="position()" />
+								<xsl:choose>
+									<xsl:when test="$rowCount = '1'">
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<xsl:for-each select="coll">
+												<xsl:variable name="collP">
+													<xsl:value-of select="position()" />
 												</xsl:variable>
-												<input type="text" name="x21" size="7" value="{$TCOLL}" />
-											</div>
-										</td>
-									</xsl:for-each>
-								</tr>
+												<td>
+													<div align="center">
+														<input type="checkbox" name="checkboxX2{$collP}"
+															value="checkbox" />
+													</div>
+												</td>
+											</xsl:for-each>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td>
+												<div align="center">
+													<xsl:value-of select="$fn2" />
+												</div>
+											</td>
+											<xsl:for-each select="coll">
+												<td>
+													<div align="center">
+														<xsl:variable name="level1Count" select="position()" />
+														<xsl:value-of select="$level1Count" />
+													</div>
+												</td>
+											</xsl:for-each>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<div align="center">
+													<xsl:value-of select="$fn1" />
+												</div>
+											</td>
+											<td>
+												<div align="center">
+													<xsl:value-of select="$namet" />
+												</div>
+											</td>
+											<xsl:for-each select="coll">
+												<xsl:variable name="collP">
+													<xsl:value-of select="position()" />
+												</xsl:variable>
+												<td width="15" bgcolor="#00FFFF" height="10">
+													<div align="center">
+														<xsl:variable name="TCOLL">
+															<xsl:value-of select="index" />
+														</xsl:variable>
+														<input type="text" name="x2{$collP}" size="7" value="{$TCOLL}" />
+													</div>
+												</td>
+											</xsl:for-each>
+										</tr>
+									</xsl:when>
+								</xsl:choose>
+
 								<tr>
 									<td>
 										<div align="center">
-											<input type="checkbox" name="checkboxX20" value="checkbox" />
+
+											<input type="checkbox" name="checkboxX1{$rowP}" value="checkbox" />
 										</div>
 									</td>
 									<td>
@@ -113,16 +172,20 @@
 											<xsl:variable name="TROW">
 												<xsl:value-of select="index" />
 											</xsl:variable>
-											<input type="text" name="x21" size="7" value="{$TROW}" />
+											<input type="text" name="x1{$rowP}" size="7" value="{$TROW}" />
 										</div>
 									</td>
 									<xsl:for-each select="coll">
+										<xsl:variable name="collP">
+											<xsl:value-of select="position()" />
+										</xsl:variable>
 										<td width="15" bgcolor="#FFFF66" height="10">
 											<div align="center">
 												<xsl:variable name="TCELL">
 													<xsl:value-of select="cell/value" />
 												</xsl:variable>
-												<input type="text" name="y1_1" size="7" value="{$TCELL}" />
+												<input type="text" name="y{$rowP}_{$collP}" size="7"
+													value="{$TCELL}" />
 											</div>
 										</td>
 

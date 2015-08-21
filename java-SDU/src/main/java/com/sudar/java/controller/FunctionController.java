@@ -1,6 +1,5 @@
 package com.sudar.java.controller;
 
-import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
@@ -8,10 +7,7 @@ import org.apache.log4j.Logger;
 import com.sudar.java.http.HttpResponse;
 import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
-import com.sudar.java.model.Cell;
-import com.sudar.java.model.Coll;
 import com.sudar.java.model.FunctionsList;
-import com.sudar.java.model.Row;
 import com.sudar.java.view.FunctionView;
 
 public class FunctionController {
@@ -21,9 +17,11 @@ public class FunctionController {
 	private String action;
 	private String view;
 	private String fname;
+	private Map<String, String> myGets;
 	
-	public FunctionController(Map gets) {
+	public FunctionController(Map<String, String> gets) {
 		if (gets != null) {
+			setMyGets(gets);
 			if (gets.get("action") != null) setAction(gets.get("action").toString());
 			if (gets.get("view") != null) setView(gets.get("view").toString());
 			if (gets.get("fname") != null) setFname(gets.get("fname").toString());
@@ -32,25 +30,18 @@ public class FunctionController {
 	}
 	
 	public String func() throws Exception {
-		LoadXmlToObject ob = new LoadXmlToObject();	
-		FunctionsList fl = ob.loadFunctionsList();
+		FunctionsList fl = LoadXmlToObject.getFl();
 		
 		if (getAction() != null && getAction().equals("addrow") && getFname() != null) {
 			for (int i = 0; i < fl.getFunctions().size();i++) {
 				if (fl.getFunctions().get(i).getDescription().equals(getFname())) {
-					List<Row> row = fl.getFunctions().get(i).getRow();
-										
-					Cell cell1 = new Cell();
-					cell1.setValue(0);					
-					Coll coll1 = new Coll();
-					coll1.setIndex(0);
-					coll1.setCell(cell1);
-					Row row1 = new Row();
-					row1.setIndex(0);
-					row1.getColl().add(coll1);
-					
-					row.add(row1);
-
+					fl.getFunctions().get(i).add();
+				}
+			}
+		} else if (getAction() != null && getAction().equals("save") && getFname() != null) {
+			for (int i = 0; i < fl.getFunctions().size();i++) {
+				if (fl.getFunctions().get(i).getDescription().equals(getFname())) {
+					fl.getFunctions().get(i).save(getMyGets());
 				}
 			}
 		}
@@ -96,5 +87,13 @@ public class FunctionController {
 
 	public void setFname(String fname) {
 		this.fname = fname;
+	}
+
+	public Map<String, String> getMyGets() {
+		return myGets;
+	}
+
+	public void setMyGets(Map<String, String> myGets) {
+		this.myGets = myGets;
 	}
 }

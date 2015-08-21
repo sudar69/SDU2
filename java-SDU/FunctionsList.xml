@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <functionsList>
     <function>
-        <description>Cx(alpha Mtau) for 120M2</description>
+        <description>Cx(alpha Mtau) for 120M</description>
         <name>Cx</name>
         <nameFirstArgument>delta</nameFirstArgument>
+        <nameSecondArgument>Mtau</nameSecondArgument>
         <row>
             <coll>
                 <cell>
                     <value>0.16</value>
                 </cell>
-                <index>0.5</index>
+                <index>0.6</index>
             </coll>
             <index>0.0</index>
+            <size>1</size>
         </row>
-        <type>f2</type>
+        <row>
+            <coll>
+                <cell>
+                    <value>0.1</value>
+                </cell>
+                <index>0.6</index>
+            </coll>
+            <index>0.0349</index>
+            <size>1</size>
+        </row>
+        <row>
+            <coll>
+                <cell>
+                    <value>0.0</value>
+                </cell>
+                <index>0.6</index>
+            </coll>
+            <index>10.0</index>
+            <size>1</size>
+        </row>
+        <size>3</size>
+        <type>2</type>
     </function>
     <function>
         <description>Cx(alpha Mtau) for 120M2</description>
         <name>Cx</name>
         <nameFirstArgument>delta</nameFirstArgument>
+        <nameSecondArgument>Mtau</nameSecondArgument>
         <row>
             <coll>
                 <cell>
@@ -27,7 +51,19 @@
                 <index>0.5</index>
             </coll>
             <index>0.0</index>
+            <size>1</size>
         </row>
-        <type>f2</type>
+        <row>
+            <coll>
+                <cell>
+                    <value>0.1</value>
+                </cell>
+                <index>0.5</index>
+            </coll>
+            <index>0.1</index>
+            <size>1</size>
+        </row>
+        <size>2</size>
+        <type>2</type>
     </function>
 </functionsList>
