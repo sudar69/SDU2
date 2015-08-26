@@ -15,4 +15,8 @@ public class FunctionView {
 		return xml.marshaller(ob.getFunctions().get(in), "function2.xsl");
 	}
 	
+	public static String func1(MarshallerToXML xml, FunctionsList ob, int in) throws Exception {
+		return xml.marshaller(ob.getFunctions().get(in), "function1.xsl");
+	}
+	
 }

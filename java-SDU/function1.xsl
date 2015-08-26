@@ -64,10 +64,6 @@
 								value="addrow" />
 							<input class="btn btn-default" type="submit" name="action"
 								value="deleteRows" />
-							<input class="btn btn-default" type="submit" name="action"
-								value="addColumn" />
-							<input class="btn btn-default" type="submit" name="action"
-								value="deleteColumns" />
 							<a class="btn btn-default" href="/?controller=func" role="button">Закрыть
 							</a>
 						</p>
@@ -77,13 +73,13 @@
 						<xsl:variable name="descr" select="description" />
 						<p align="left">
 							<input type="hidden" name="controller" value="func" />
-							<input type="hidden" name="view" value="f2" />
+							<input type="hidden" name="view" value="f1" />
 							<xsl:variable name="DESCRIP">
 								<xsl:value-of select="description" />
 							</xsl:variable>
 							<input type="hidden" name="fname" value="{$DESCRIP}" />
 							<input type="hidden" name="type" value="tableFunction" />
-							<input type="hidden" name="argumentNum" value="2" />
+							<input type="hidden" name="argumentNum" value="1" />
 						</p>
 						<p>Cx(delta,Mtau)
 						</p>
@@ -93,16 +89,11 @@
 						<p>
 							Cx(
 							<input name="x1Value" type="text" size="10" value="" />
-							,
-							<input name="x2Value" type="text" size="10" value="" />
 							)
 							<input name="action" type="submit" value="=" />
 							<xsl:value-of select="tempValue" />
 						</p>
-						<p>
-							<input type="hidden" name="x1Num" value="9" />
-							<input type="hidden" name="x2Num" value="10" />
-						</p>
+
 						<table border="1" cellspacing="1" cellpadding="1">
 							<xsl:for-each select="row">
 								<xsl:variable name="rowP">
@@ -114,38 +105,6 @@
 										<tr>
 											<td></td>
 											<td></td>
-											<td></td>
-											<xsl:for-each select="coll">
-												<xsl:variable name="collP">
-													<xsl:value-of select="position()" />
-												</xsl:variable>
-												<td>
-													<div align="center">
-														<input type="checkbox" name="checkboxX2{$collP}"
-															value="checkbox" />
-													</div>
-												</td>
-											</xsl:for-each>
-										</tr>
-										<tr>
-											<td></td>
-											<td></td>
-											<td>
-												<div align="center">
-													<xsl:value-of select="$fn2" />
-												</div>
-											</td>
-											<xsl:for-each select="coll">
-												<td>
-													<div align="center">
-														<xsl:variable name="level1Count" select="position()" />
-														<xsl:value-of select="$level1Count" />
-													</div>
-												</td>
-											</xsl:for-each>
-										</tr>
-										<tr>
-											<td></td>
 											<td>
 												<div align="center">
 													<xsl:value-of select="$fn1" />
@@ -156,19 +115,6 @@
 													<xsl:value-of select="$namet" />
 												</div>
 											</td>
-											<xsl:for-each select="coll">
-												<xsl:variable name="collP">
-													<xsl:value-of select="position()" />
-												</xsl:variable>
-												<td width="15" bgcolor="#00FFFF" height="10">
-													<div align="center">
-														<xsl:variable name="TCOLL">
-															<xsl:value-of select="index" />
-														</xsl:variable>
-														<input type="text" name="x2{$collP}" size="7" value="{$TCOLL}" />
-													</div>
-												</td>
-											</xsl:for-each>
 										</tr>
 									</xsl:when>
 								</xsl:choose>
@@ -220,18 +166,11 @@
 							<input type="text" name="yName" value="{$YNAME}" />
 						</p>
 						<p>
-							Имя первого аргумента
+							Имя аргумента
 							<xsl:variable name="X1NAME">
 								<xsl:value-of select="nameFirstArgument" />
 							</xsl:variable>
 							<input type="text" name="x1Name" value="{$X1NAME}" />
-						</p>
-						<p>
-							Имя второго аргумента
-							<xsl:variable name="X2NAME">
-								<xsl:value-of select="nameSecondArgument" />
-							</xsl:variable>
-							<input type="text" name="x2Name" value="{$X2NAME}" />
 						</p>
 						<p></p>
 						<p>
