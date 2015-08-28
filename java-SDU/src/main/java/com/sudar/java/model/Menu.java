@@ -11,11 +11,8 @@ public class Menu {
 	public Menu() {
 		
 		String[][] data = {
-				{ "Открыть файл", "?action=func" },
-				{ "Открыть функцию", "?controller=func" },
-				{ "Создать новый файл с исходными данными", "createfile" },
-				{ "Создать функцию одного аргумента", "createfunc1" },
-				{ "Создать функцию двух аргументов", "createfunc2" }};
+				{ "Открыть файл", "?controller=files" },
+				{ "Открыть функцию", "?controller=func" }};
 	    for (String s[] : data) {
 	      
 	      MenuItem book1 = new MenuItem();

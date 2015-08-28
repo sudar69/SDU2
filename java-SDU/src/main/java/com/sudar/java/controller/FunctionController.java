@@ -13,7 +13,7 @@ import com.sudar.java.view.FunctionView;
 
 public class FunctionController {
 
-	private static Logger log = Logger.getLogger(HttpResponse.class);
+	private static Logger log = Logger.getLogger(FunctionController.class);
 
 	private String action;
 	private String view;

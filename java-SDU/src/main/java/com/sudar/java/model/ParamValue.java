@@ -4,6 +4,8 @@ public class ParamValue {
 	
 	private String name;
 	
+	private String pname;
+	
 	private double value;
 	
 	private boolean readonly;
@@ -30,5 +32,13 @@ public class ParamValue {
 
 	public void setReadonly(boolean readonly) {
 		this.readonly = readonly;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 }

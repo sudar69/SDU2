@@ -23,6 +23,7 @@ public class WebServer extends Thread {
 	public static void main(String args[]) {
 		LoadXmlToObject fl = new LoadXmlToObject();
 		fl.loadFunctionsList();
+		fl.loadFilesList();
 		try {
 			new WebServer().start(getValidPortParam(args));
 		} catch (Exception e) {

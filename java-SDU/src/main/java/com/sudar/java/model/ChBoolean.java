@@ -4,7 +4,9 @@ public class ChBoolean {
 	
 	private String name;
 	
-	private boolean check;
+	private String pname;
+	
+	private boolean check = false;
 
 	public String getName() {
 		return name;
@@ -20,6 +22,14 @@ public class ChBoolean {
 
 	public void setCheck(boolean check) {
 		this.check = check;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 
 }

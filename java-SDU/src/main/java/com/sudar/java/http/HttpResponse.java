@@ -16,8 +16,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.sudar.java.controller.FilesController;
 import com.sudar.java.controller.FunctionController;
-import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
 import com.sudar.java.model.Menu;
 
@@ -47,7 +47,7 @@ public class HttpResponse {
 					fillHeaders(Status._200);
 					// TODO fix dir bug http://localhost:8080/src/test
 					headers.add(ContentType.HTML.toString());
-					Map gets = splitQuery(new URL("http://127.0.0.1" + req.uri));
+					Map<String, String> gets = splitQuery(new URL("http://127.0.0.1" + req.uri));
 					log.info(gets);
 					if (req.uri.equals("/") ) {
 						MarshallerToXML XML = new MarshallerToXML();
@@ -60,12 +60,9 @@ public class HttpResponse {
 					} else if (gets != null && gets.get("controller") != null && gets.get("controller").equals("func")) {
 						FunctionController fc = new FunctionController(gets);
 						fillResponse(fc.func());
-						//LoadXmlToObject ob = new LoadXmlToObject();	
-						//ob.saveXML();
-						//fillResponse("");
-						//MarshallerToXML XML = new MarshallerToXML();
-						//fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "functionsList.xsl"));
-						//fillResponse(XML.marshaller(ob.loadFunctionsList().getFunctions().get(0), "function.xsl"));
+					} else if (gets != null && gets.get("controller") != null && gets.get("controller").equals("files")) {
+						FilesController fc = new FilesController(gets);
+						fillResponse(fc.files());
 					} else {
 						log.info("File not found:" + req.uri);
 						fillHeaders(Status._404);

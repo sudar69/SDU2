@@ -3,26 +3,26 @@ package com.sudar.java.model;
 public class Teta0 {
 
 	private int id;
-	
+
 	private boolean checkbox;
-	
-	private double D;
-	
+
+	private double d;
+
 	private double teta0;
-	
-	private double iput;
-	
-	private double iaut;
-	
-	private double iput2;
-	
-	private double dxtzrpts;
-	
-	private double pp;
-	
-	private double dxtzrmts;
-	
-	private double pm;
+
+	private double iput = 1;
+
+	private double iaut = 0;
+
+	private double iput2 = 0;
+
+	private double dxtzrpts = 0;
+
+	private double pp = 0;
+
+	private double dxtzrmts = 0;
+
+	private double pm = 0;
 
 	public int getId() {
 		return id;
@@ -41,11 +41,11 @@ public class Teta0 {
 	}
 
 	public double getD() {
-		return D;
+		return d;
 	}
 
 	public void setD(double d) {
-		D = d;
+		this.d = d;
 	}
 
 	public double getTeta0() {

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<filesList>
+    <file>
+        <parameter>
+            <aerdinamik>false</aerdinamik>
+            <findI>false</findI>
+            <findIaut>false</findIaut>
+            <findIp1p2>false</findIp1p2>
+            <findIp2>false</findIp2>
+            <findIvse>false</findIvse>
+            <findpm>false</findpm>
+            <findpp>false</findpp>
+            <saveCalculation>false</saveCalculation>
+            <teta0>
+                <checkbox>false</checkbox>
+                <d>1000.0</d>
+                <dxtzrmts>0.0</dxtzrmts>
+                <dxtzrpts>0.0</dxtzrpts>
+                <iaut>0.0</iaut>
+                <id>1</id>
+                <iput>1.0</iput>
+                <iput2>0.0</iput2>
+                <pm>0.0</pm>
+                <pp>0.0</pp>
+                <teta0>1.0</teta0>
+            </teta0>
+            <teta0>
+                <checkbox>false</checkbox>
+                <d>2000.0</d>
+                <dxtzrmts>0.0</dxtzrmts>
+                <dxtzrpts>0.0</dxtzrpts>
+                <iaut>0.0</iaut>
+                <id>2</id>
+                <iput>1.0</iput>
+                <iput2>0.0</iput2>
+                <pm>0.0</pm>
+                <pp>0.0</pp>
+                <teta0>2.0</teta0>
+            </teta0>
+            <title>test</title>
+        </parameter>
+    </file>
+    <file>
+        <parameter>
+            <aerdinamik>false</aerdinamik>
+            <beginData>
+                <name>X0, м</name>
+                <pname>x0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>Y0, м</name>
+                <pname>y0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>Z0, м</name>
+                <pname>z0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>V0, м/с</name>
+                <pname>v0</pname>
+                <readonly>false</readonly>
+                <value>945.0</value>
+            </beginData>
+            <beginData>
+                <name>psi10, рад</name>
+                <pname>psi10</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>psi20=teta0, рад</name>
+                <pname>psi20</pname>
+                <readonly>true</readonly>
+                <value>-1.0</value>
+            </beginData>
+            <beginData>
+                <name>x10, рад</name>
+                <pname>x10</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>x20, рад</name>
+                <pname>x20</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>alpha10, рад/с</name>
+                <pname>alpha10</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>alpha20, рад/с</name>
+                <pname>alpha20</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>r0, рад/с</name>
+                <pname>r0</pname>
+                <readonly>true</readonly>
+                <value>-2.0</value>
+            </beginData>
+            <beginData>
+                <name>Pi0</name>
+                <pname>Pi0</pname>
+                <readonly>true</readonly>
+                <value>1.0</value>
+            </beginData>
+            <findI>false</findI>
+            <findIaut>false</findIaut>
+            <findIp1p2>false</findIp1p2>
+            <findIp2>false</findIp2>
+            <findIvse>false</findIvse>
+            <findpm>false</findpm>
+            <findpp>false</findpp>
+            <rpgforv>
+                <check>true</check>
+                <name>Вбн, Вдн</name>
+                <pname>allCorrectionsVb</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dr0</name>
+                <pname>checkboxdr0</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dalpha</name>
+                <pname>checkboxdalpha</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+ddoper</name>
+                <pname>checkboxddoper</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+ddsopl</name>
+                <pname>checkboxddsopl</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dgamma</name>
+                <pname>checkboxgamma</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dZp/
+dx10</name>
+                <pname>checkboxdx10</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dx20</name>
+                <pname>checkboxdx20</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dZp/
+dalpha10</name>
+                <pname>checkboxdalpha10</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dalpha20</name>
+                <pname>checkboxdalpha20</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dZp/
+dx1k</name>
+                <pname>checkboxdx1k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dx2k</name>
+                <pname>checkboxdx2k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dZp/
+dalpha1k</name>
+                <pname>checkboxdalpha1k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dalpha2k</name>
+                <pname>checkboxdalpha2k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+dtn</name>
+                <pname>checkboxdtn</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>true</check>
+                <name>dXp/
+ddelta</name>
+                <pname>checkboxddelta</pname>
+            </rpgforv>
+            <rpk>
+                <check>true</check>
+                <name>Все</name>
+                <pname>allCorrections</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>Xp, Zp</name>
+                <pname>checkboxXpZp</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXtys</name>
+                <pname>checkboxDxtys</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>Вд, Вб, Вв</name>
+                <pname>checkboxVd</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>Вд2, Вб2</name>
+                <pname>checkboxVd2</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dZw</name>
+                <pname>checkboxDzw</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXw</name>
+                <pname>checkboxDxw</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXh</name>
+                <pname>checkboxDxh</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXt</name>
+                <pname>checkboxDxt</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXtz</name>
+                <pname>checkboxDxtz</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXtzr+</name>
+                <pname>checkboxDXtzrp</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXtzr-</name>
+                <pname>checkboxDXtzrm</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXv0</name>
+                <pname>checkboxDxv0</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXq</name>
+                <pname>checkboxDxq</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXw0</name>
+                <pname>checkboxDxw0</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXvr</name>
+                <pname>checkboxXvr</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dZvr</name>
+                <pname>checkboxZvr</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dZwaz, dПwaz</name>
+                <pname>checkboxDzwaz</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dPwax, dZwax</name>
+                <pname>checkboxDpwax</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dZwпz</name>
+                <pname>checkboxDzwp</pname>
+            </rpk>
+            <rpk>
+                <check>true</check>
+                <name>dXwпx</name>
+                <pname>checkboxDxwp</pname>
+            </rpk>
+            <saveCalculation>false</saveCalculation>
+            <teta0>
+                <checkbox>false</checkbox>
+                <d>1000.0</d>
+                <dxtzrmts>0.0</dxtzrmts>
+                <dxtzrpts>0.0</dxtzrpts>
+                <iaut>0.0</iaut>
+                <id>1</id>
+                <iput>1.0</iput>
+                <iput2>0.0</iput2>
+                <pm>0.0</pm>
+                <pp>0.0</pp>
+                <teta0>1.0</teta0>
+            </teta0>
+            <title>NewFile</title>
+        </parameter>
+    </file>
+</filesList>

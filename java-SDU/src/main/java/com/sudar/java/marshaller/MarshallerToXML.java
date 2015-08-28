@@ -5,6 +5,7 @@ import javax.xml.bind.util.JAXBSource;
 import javax.xml.transform.*;
 import javax.xml.transform.stream.*;
 
+import com.sudar.java.model.FilesList;
 import com.sudar.java.model.FunctionsList;
 import com.sudar.java.model.Menu;
 
@@ -39,7 +40,7 @@ public class MarshallerToXML {
         Transformer transformer = tf.newTransformer(xslt);
  
         // Source
-        JAXBContext jc = JAXBContext.newInstance(Menu.class, FunctionsList.class);
+        JAXBContext jc = JAXBContext.newInstance(Menu.class, FunctionsList.class, FilesList.class);
         JAXBSource source = new JAXBSource(jc, contentObject);
  
         // Result
