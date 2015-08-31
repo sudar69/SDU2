@@ -32,6 +32,7 @@ public class FilesList {
 		parameter.defaultRpk();
 		parameter.defaultRpgforv();
 		parameter.defaultBeginData();
+		parameter.defaultValueConst();
 		file.setParameter(parameter);
 		getFile().add(file);
 	}

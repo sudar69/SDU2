@@ -65,7 +65,7 @@
                 <name>V0, м/с</name>
                 <pname>v0</pname>
                 <readonly>false</readonly>
-                <value>945.0</value>
+                <value>620.0</value>
             </beginData>
             <beginData>
                 <name>psi10, рад</name>
@@ -123,107 +123,107 @@
             <findpm>false</findpm>
             <findpp>false</findpp>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>Вбн, Вдн</name>
                 <pname>allCorrectionsVb</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dr0</name>
                 <pname>checkboxdr0</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dalpha</name>
                 <pname>checkboxdalpha</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 ddoper</name>
                 <pname>checkboxddoper</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 ddsopl</name>
                 <pname>checkboxddsopl</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dgamma</name>
                 <pname>checkboxgamma</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dZp/
 dx10</name>
                 <pname>checkboxdx10</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dx20</name>
                 <pname>checkboxdx20</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dZp/
 dalpha10</name>
                 <pname>checkboxdalpha10</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dalpha20</name>
                 <pname>checkboxdalpha20</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dZp/
 dx1k</name>
                 <pname>checkboxdx1k</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dx2k</name>
                 <pname>checkboxdx2k</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dZp/
 dalpha1k</name>
                 <pname>checkboxdalpha1k</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dalpha2k</name>
                 <pname>checkboxdalpha2k</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 dtn</name>
                 <pname>checkboxdtn</pname>
             </rpgforv>
             <rpgforv>
-                <check>true</check>
+                <check>false</check>
                 <name>dXp/
 ddelta</name>
                 <pname>checkboxddelta</pname>
             </rpgforv>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>Все</name>
                 <pname>allCorrections</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>Xp, Zp</name>
                 <pname>checkboxXpZp</pname>
             </rpk>
@@ -238,87 +238,392 @@ ddelta</name>
                 <pname>checkboxVd</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>Вд2, Вб2</name>
                 <pname>checkboxVd2</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dZw</name>
                 <pname>checkboxDzw</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXw</name>
                 <pname>checkboxDxw</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXh</name>
                 <pname>checkboxDxh</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXt</name>
                 <pname>checkboxDxt</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXtz</name>
                 <pname>checkboxDxtz</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXtzr+</name>
                 <pname>checkboxDXtzrp</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXtzr-</name>
                 <pname>checkboxDXtzrm</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXv0</name>
                 <pname>checkboxDxv0</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXq</name>
                 <pname>checkboxDxq</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXw0</name>
                 <pname>checkboxDxw0</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dXvr</name>
                 <pname>checkboxXvr</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dZvr</name>
                 <pname>checkboxZvr</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dZwaz, dПwaz</name>
                 <pname>checkboxDzwaz</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dPwax, dZwax</name>
                 <pname>checkboxDpwax</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
                 <name>dZwпz</name>
                 <pname>checkboxDzwp</pname>
             </rpk>
             <rpk>
-                <check>true</check>
+                <check>false</check>
+                <name>dXwпx</name>
+                <pname>checkboxDxwp</pname>
+            </rpk>
+            <saveCalculation>false</saveCalculation>
+            <teta0>
+                <checkbox>false</checkbox>
+                <d>1000.0</d>
+                <dxtzrmts>0.0</dxtzrmts>
+                <dxtzrpts>0.0</dxtzrpts>
+                <iaut>0.0</iaut>
+                <id>1</id>
+                <iput>1.0</iput>
+                <iput2>0.0</iput2>
+                <pm>0.0</pm>
+                <pp>0.0</pp>
+                <teta0>1.0</teta0>
+            </teta0>
+            <title>NewFile_</title>
+        </parameter>
+    </file>
+    <file>
+        <parameter>
+            <aerdinamik>false</aerdinamik>
+            <beginData>
+                <name>X0, м</name>
+                <pname>x0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>Y0, м</name>
+                <pname>y0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>Z0, м</name>
+                <pname>z0</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>V0, м/с</name>
+                <pname>v0</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </beginData>
+            <beginData>
+                <name>psi10, рад</name>
+                <pname>psi10</pname>
+                <readonly>true</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>psi20=teta0, рад</name>
+                <pname>psi20</pname>
+                <readonly>true</readonly>
+                <value>-1.0</value>
+            </beginData>
+            <beginData>
+                <name>x10, рад</name>
+                <pname>x10</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>x20, рад</name>
+                <pname>x20</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>alpha10, рад/с</name>
+                <pname>alpha10</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>alpha20, рад/с</name>
+                <pname>alpha20</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </beginData>
+            <beginData>
+                <name>r0, рад/с</name>
+                <pname>r0</pname>
+                <readonly>true</readonly>
+                <value>-2.0</value>
+            </beginData>
+            <beginData>
+                <name>Pi0</name>
+                <pname>Pi0</pname>
+                <readonly>true</readonly>
+                <value>1.0</value>
+            </beginData>
+            <cx_delta_Mtau_file>Cx(delta Mtau)for_OF462_OF482</cx_delta_Mtau_file>
+            <cydelta_Mtau_file></cydelta_Mtau_file>
+            <findI>false</findI>
+            <findIaut>false</findIaut>
+            <findIp1p2>false</findIp1p2>
+            <findIp2>false</findIp2>
+            <findIvse>false</findIvse>
+            <findpm>false</findpm>
+            <findpp>false</findpp>
+            <mxalpha_Mtau_file></mxalpha_Mtau_file>
+            <mxwx_Mtau_file></mxwx_Mtau_file>
+            <mzdelta_Mtau_file></mzdelta_Mtau_file>
+            <mzwz_Mtau_file></mzwz_Mtau_file>
+            <rpgforv>
+                <check>false</check>
+                <name>Вбн, Вдн</name>
+                <pname>allCorrectionsVb</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dr0</name>
+                <pname>checkboxdr0</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dalpha</name>
+                <pname>checkboxdalpha</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+ddoper</name>
+                <pname>checkboxddoper</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+ddsopl</name>
+                <pname>checkboxddsopl</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dgamma</name>
+                <pname>checkboxgamma</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dZp/
+dx10</name>
+                <pname>checkboxdx10</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dx20</name>
+                <pname>checkboxdx20</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dZp/
+dalpha10</name>
+                <pname>checkboxdalpha10</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dalpha20</name>
+                <pname>checkboxdalpha20</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dZp/
+dx1k</name>
+                <pname>checkboxdx1k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dx2k</name>
+                <pname>checkboxdx2k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dZp/
+dalpha1k</name>
+                <pname>checkboxdalpha1k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dalpha2k</name>
+                <pname>checkboxdalpha2k</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+dtn</name>
+                <pname>checkboxdtn</pname>
+            </rpgforv>
+            <rpgforv>
+                <check>false</check>
+                <name>dXp/
+ddelta</name>
+                <pname>checkboxddelta</pname>
+            </rpgforv>
+            <rpk>
+                <check>false</check>
+                <name>Все</name>
+                <pname>allCorrections</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>Xp, Zp</name>
+                <pname>checkboxXpZp</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXtys</name>
+                <pname>checkboxDxtys</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>Вд, Вб, Вв</name>
+                <pname>checkboxVd</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>Вд2, Вб2</name>
+                <pname>checkboxVd2</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dZw</name>
+                <pname>checkboxDzw</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXw</name>
+                <pname>checkboxDxw</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXh</name>
+                <pname>checkboxDxh</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXt</name>
+                <pname>checkboxDxt</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXtz</name>
+                <pname>checkboxDxtz</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXtzr+</name>
+                <pname>checkboxDXtzrp</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXtzr-</name>
+                <pname>checkboxDXtzrm</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXv0</name>
+                <pname>checkboxDxv0</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXq</name>
+                <pname>checkboxDxq</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXw0</name>
+                <pname>checkboxDxw0</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dXvr</name>
+                <pname>checkboxXvr</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dZvr</name>
+                <pname>checkboxZvr</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dZwaz, dПwaz</name>
+                <pname>checkboxDzwaz</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dPwax, dZwax</name>
+                <pname>checkboxDpwax</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
+                <name>dZwпz</name>
+                <pname>checkboxDzwp</pname>
+            </rpk>
+            <rpk>
+                <check>false</check>
                 <name>dXwпx</name>
                 <pname>checkboxDxwp</pname>
             </rpk>
@@ -337,6 +642,612 @@ ddelta</name>
                 <teta0>1.0</teta0>
             </teta0>
             <title>NewFile</title>
+            <valueConst>
+                <name>eta</name>
+                <pname>eta</pname>
+                <readonly>false</readonly>
+                <value>25.0</value>
+            </valueConst>
+            <valueConst>
+                <name>eta1</name>
+                <pname>eta1</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dTz, град</name>
+                <pname>dTz</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dTзр+</name>
+                <pname>dTzrp</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dTзр-</name>
+                <pname>dTzrm</pname>
+                <readonly>false</readonly>
+                <value>-10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>w0</name>
+                <pname>w0</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>tн, с</name>
+                <pname>tn</pname>
+                <readonly>false</readonly>
+                <value>1000.0</value>
+            </valueConst>
+            <valueConst>
+                <name>tauaN, с</name>
+                <pname>tauaN</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>g, м/с2</name>
+                <pname>g</pname>
+                <readonly>false</readonly>
+                <value>9.81</value>
+            </valueConst>
+            <valueConst>
+                <name>qn, кг</name>
+                <pname>qn</pname>
+                <readonly>false</readonly>
+                <value>46.0</value>
+            </valueConst>
+            <valueConst>
+                <name>qпут2, кг</name>
+                <pname>qput2</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>k1</name>
+                <pname>k1</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>k2</name>
+                <pname>k2</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>I1N</name>
+                <pname>I1N</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dtau, град</name>
+                <pname>dtau</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>tauoN, К</name>
+                <pname>tauoN</pname>
+                <readonly>false</readonly>
+                <value>288.9</value>
+            </valueConst>
+            <valueConst>
+                <name>rooN</name>
+                <pname>rooN</pname>
+                <readonly>false</readonly>
+                <value>0.123</value>
+            </valueConst>
+            <valueConst>
+                <name>PoN, мм.рт.ст</name>
+                <pname>PoN</pname>
+                <readonly>false</readonly>
+                <value>750.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dP, мм.рт.ст</name>
+                <pname>dP</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dVo, %V0</name>
+                <pname>dV0</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dq, 1в/зн</name>
+                <pname>dq</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dw, кг</name>
+                <pname>dw</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>lтз</name>
+                <pname>ltz</pname>
+                <readonly>false</readonly>
+                <value>7.92E-4</value>
+            </valueConst>
+            <valueConst>
+                <name>lq</name>
+                <pname>lq</pname>
+                <readonly>false</readonly>
+                <value>0.165</value>
+            </valueConst>
+            <valueConst>
+                <name>lwzr</name>
+                <pname>lwzr</pname>
+                <readonly>false</readonly>
+                <value>1.03</value>
+            </valueConst>
+            <valueConst>
+                <name>LB, м</name>
+                <pname>LB</pname>
+                <readonly>false</readonly>
+                <value>0.7</value>
+            </valueConst>
+            <valueConst>
+                <name>Wx, м/с</name>
+                <pname>Wx</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Wz, м/с</name>
+                <pname>Wz</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Wax, м/с</name>
+                <pname>Wax</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Waz, м/с</name>
+                <pname>Waz</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Wpx, м/с</name>
+                <pname>Wpx</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Wpz, м/с</name>
+                <pname>Wpz</pname>
+                <readonly>false</readonly>
+                <value>10.0</value>
+            </valueConst>
+            <valueConst>
+                <name>d, м</name>
+                <pname>d</pname>
+                <readonly>false</readonly>
+                <value>0.152</value>
+            </valueConst>
+            <valueConst>
+                <name>doper</name>
+                <pname>doper</pname>
+                <readonly>false</readonly>
+                <value>0.152</value>
+            </valueConst>
+            <valueConst>
+                <name>dsopl</name>
+                <pname>dsopl</pname>
+                <readonly>false</readonly>
+                <value>0.152</value>
+            </valueConst>
+            <valueConst>
+                <name>A</name>
+                <pname>A</pname>
+                <readonly>false</readonly>
+                <value>0.1563</value>
+            </valueConst>
+            <valueConst>
+                <name>C</name>
+                <pname>C</pname>
+                <readonly>false</readonly>
+                <value>0.008</value>
+            </valueConst>
+            <valueConst>
+                <name>R, м/град</name>
+                <pname>R</pname>
+                <readonly>false</readonly>
+                <value>29.27</value>
+            </valueConst>
+            <valueConst>
+                <name>dteta, рад</name>
+                <pname>dteta</pname>
+                <readonly>false</readonly>
+                <value>0.001042</value>
+            </valueConst>
+            <valueConst>
+                <name>r teta0, тыс</name>
+                <pname>rteta0</pname>
+                <readonly>false</readonly>
+                <value>0.25</value>
+            </valueConst>
+            <valueConst>
+                <name>rv0, %v0</name>
+                <pname>rv0</pname>
+                <readonly>false</readonly>
+                <value>0.15</value>
+            </valueConst>
+            <valueConst>
+                <name>rc, %</name>
+                <pname>rc</pname>
+                <readonly>false</readonly>
+                <value>0.4</value>
+            </valueConst>
+            <valueConst>
+                <name>rw</name>
+                <pname>rw</pname>
+                <readonly>false</readonly>
+                <value>0.25</value>
+            </valueConst>
+            <valueConst>
+                <name>rz, рад</name>
+                <pname>rz</pname>
+                <readonly>false</readonly>
+                <value>7.0E-4</value>
+            </valueConst>
+            <valueConst>
+                <name>delta, рад</name>
+                <pname>delta_</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>alpha</name>
+                <pname>alpha</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>gamma, рад</name>
+                <pname>gamma</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>gamma_aer, рад</name>
+                <pname>gamma_aer</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>gamma_w</name>
+                <pname>gamma_w</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>gamma_m</name>
+                <pname>gamma_m</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rx, м</name>
+                <pname>rx_</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ry, м</name>
+                <pname>ry_</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rz, м</name>
+                <pname>rz_</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>Bspin</name>
+                <pname>Bspin</pname>
+                <readonly>false</readonly>
+                <value>0.890118</value>
+            </valueConst>
+            <valueConst>
+                <name>ar</name>
+                <pname>ar</pname>
+                <readonly>false</readonly>
+                <value>0.261798</value>
+            </valueConst>
+            <valueConst>
+                <name>omega_з</name>
+                <pname>omegaz</pname>
+                <readonly>false</readonly>
+                <value>7.292E-5</value>
+            </valueConst>
+            <valueConst>
+                <name>Rз</name>
+                <pname>Rz</pname>
+                <readonly>false</readonly>
+                <value>6371000.0</value>
+            </valueConst>
+            <valueConst>
+                <name>kb</name>
+                <pname>kb</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>sBr</name>
+                <pname>sBr</pname>
+                <readonly>false</readonly>
+                <value>-1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K5</name>
+                <pname>K5</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K2</name>
+                <pname>K2</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K3</name>
+                <pname>K3</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K4</name>
+                <pname>K4</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K10</name>
+                <pname>K10</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>K6</name>
+                <pname>K6</pname>
+                <readonly>false</readonly>
+                <value>1.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dtetak, рад</name>
+                <pname>dtetak</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dvk, м/с</name>
+                <pname>dvk</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dyk, м/с</name>
+                <pname>dyk</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>r tetak, тыс</name>
+                <pname>rtetak</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rvk, %v0</name>
+                <pname>rvk</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>r psik, тыс</name>
+                <pname>rpsik</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dgammas, рад</name>
+                <pname>dgammas</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ddsopl, м</name>
+                <pname>ddsopl</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ddoper, м</name>
+                <pname>ddoper</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dalpha, рад</name>
+                <pname>dalpha</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ddelta, рад</name>
+                <pname>ddelta_</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dx10, рад</name>
+                <pname>dx10</pname>
+                <readonly>false</readonly>
+                <value>0.1</value>
+            </valueConst>
+            <valueConst>
+                <name>dx20, рад</name>
+                <pname>dx20</pname>
+                <readonly>false</readonly>
+                <value>0.1</value>
+            </valueConst>
+            <valueConst>
+                <name>dalpha10, рад/с</name>
+                <pname>dalpha10</pname>
+                <readonly>false</readonly>
+                <value>1.5</value>
+            </valueConst>
+            <valueConst>
+                <name>dalpha20, рад/с</name>
+                <pname>dalpha20</pname>
+                <readonly>false</readonly>
+                <value>1.5</value>
+            </valueConst>
+            <valueConst>
+                <name>dx1k, рад</name>
+                <pname>dx1k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dx2k, рад</name>
+                <pname>dx2k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dalpha1k, рад/с</name>
+                <pname>dalpha1k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dalpha2k, рад/с</name>
+                <pname>dalpha2k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dtн, с</name>
+                <pname>dtn</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>dr0, рад/с</name>
+                <pname>dr0</pname>
+                <readonly>false</readonly>
+                <value>20.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rx10, рад</name>
+                <pname>rx10</pname>
+                <readonly>false</readonly>
+                <value>0.015</value>
+            </valueConst>
+            <valueConst>
+                <name>rx20, рад</name>
+                <pname>rx20</pname>
+                <readonly>false</readonly>
+                <value>0.01748</value>
+            </valueConst>
+            <valueConst>
+                <name>ralpha10, рад/с</name>
+                <pname>ralpha10</pname>
+                <readonly>false</readonly>
+                <value>0.05</value>
+            </valueConst>
+            <valueConst>
+                <name>ralpha20, рад/с</name>
+                <pname>ralpha20</pname>
+                <readonly>false</readonly>
+                <value>0.087</value>
+            </valueConst>
+            <valueConst>
+                <name>rx1k, рад</name>
+                <pname>rx1k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rx2k, рад</name>
+                <pname>rx2k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ralpha1k, рад/с</name>
+                <pname>ralpha1k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ralpha2k, рад/с</name>
+                <pname>ralpha2k</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rgammas, рад</name>
+                <pname>rgammas</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rdelta, м</name>
+                <pname>rdelta</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>ralpha, рад</name>
+                <pname>ralpha</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rdoper, м</name>
+                <pname>rdoper</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rdsopl, м</name>
+                <pname>rdsopl</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
+            <valueConst>
+                <name>rr0, рад/с</name>
+                <pname>rr0</pname>
+                <readonly>false</readonly>
+                <value>0.01</value>
+            </valueConst>
+            <valueConst>
+                <name>rtн, с</name>
+                <pname>rtn</pname>
+                <readonly>false</readonly>
+                <value>0.0</value>
+            </valueConst>
         </parameter>
     </file>
 </filesList>

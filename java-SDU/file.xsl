@@ -370,6 +370,13 @@
 							Шаг
 							<input type="text" name="step" value="1" />
 						</p>
+						<p>
+							Заголовок
+							<xsl:variable name="title_">
+								<xsl:value-of select="parameter/title" />
+							</xsl:variable>
+							<input type="text" name="docTitle" value="{$title_}" />
+						</p>
 						<p align="center">
 							<b>Расчитывать поправочные коэффициенты:</b>
 						</p>
@@ -504,6 +511,148 @@
 										</td>
 									</tr>
 								</xsl:for-each>
+							</tbody>
+						</table>
+						<p align="center">
+							<b>Значения констант для расчёта табличной траектории</b>
+						</p>
+						<table width="385" border="1" cellspacing="1" cellpadding="1"
+							align="center">
+							<tbody>
+								<xsl:for-each select="parameter/valueConst">
+									<tr>
+										<td width="7%">
+											<div align="center">
+												<xsl:value-of select="position()" />
+											</div>
+										</td>
+										<td width="45%">
+											<div align="left">
+												<xsl:value-of select="name" />
+											</div>
+										</td>
+										<td width="48%">
+											<div align="left">
+												<xsl:variable name="pname_">
+													<xsl:value-of select="pname" />
+												</xsl:variable>
+
+												<xsl:variable name="value_">
+													<xsl:value-of select="value" />
+												</xsl:variable>
+												<input type="text" name="{$pname_}" value="{$value_}" />
+
+											</div>
+										</td>
+									</tr>
+								</xsl:for-each>
+							</tbody>
+						</table>
+						<p></p>
+						<table width="574" border="1" cellspacing="1" cellpadding="1"
+							align="center">
+							<tbody>
+								<tr>
+									<td width="9">
+										<div align="center">N</div>
+									</td>
+									<td width="136">
+										<div align="center">Табличная функция</div>
+									</td>
+									<td width="300">
+										<div align="center">Адрес файла</div>
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">1</div>
+									</td>
+									<td width="136">
+										<div align="center">Cx(delta,Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="cx_delta_Mtau_file_">
+											<xsl:value-of select="cx_delta_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="cx_delta_Mtau_file" size="70"
+											value="{$cx_delta_Mtau_file_}" />
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">2</div>
+									</td>
+									<td width="136">
+										<div align="center">Cydelta(Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="cydelta_Mtau_file_">
+											<xsl:value-of select="cydelta_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="cydelta_Mtau_file" size="70"
+											value="{$cydelta_Mtau_file_}" />
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">3</div>
+									</td>
+									<td width="136">
+										<div align="center">mzwz(Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="mzwz_Mtau_file_">
+											<xsl:value-of select="mzwz_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="mzwz_Mtau_file" size="70"
+											value="{$mzwz_Mtau_file_}" />
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">4</div>
+									</td>
+									<td width="136">
+										<div align="center">mzdelta(Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="mzdelta_Mtau_file_">
+											<xsl:value-of select="mzdelta_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="mzdelta_Mtau_file" size="70"
+											value="{$mzdelta_Mtau_file_}" />
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">5</div>
+									</td>
+									<td width="136">
+										<div align="center">mxwx(Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="mxwx_Mtau_file_">
+											<xsl:value-of select="mxwx_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="mxwx_Mtau_file" size="70"
+											value="{$mxwx_Mtau_file_}" />
+									</td>
+								</tr>
+								<tr>
+									<td width="9">
+										<div align="center">6</div>
+									</td>
+									<td width="136">
+										<div align="center">mxalpha(Mtau)</div>
+									</td>
+									<td width="300">
+										<xsl:variable name="mxalpha_Mtau_file_">
+											<xsl:value-of select="mxalpha_Mtau_file" />
+										</xsl:variable>
+										<input type="text" name="mxalpha_Mtau_file" size="70"
+											value="{$mxalpha_Mtau_file_}" />
+									</td>
+								</tr>
 							</tbody>
 						</table>
 					</form>
