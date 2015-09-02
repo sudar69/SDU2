@@ -18,6 +18,8 @@ public class File {
 	private Parameter parameter = new Parameter();
 	
 	private List<Result> results = new ArrayList<Result>();
+	
+	private int startCalc = 0;
 
 	public Parameter getParameter() {
 		return parameter;
@@ -40,5 +42,17 @@ public class File {
 		LoadXmlToObject.saveFilesListXML();
 		getParameter().save(map);
 		LoadXmlToObject.saveFilesListXML();
+	}
+	
+	public void startCalculation() {
+		setStartCalc(1);
+	}
+
+	public int getStartCalc() {
+		return startCalc;
+	}
+
+	public void setStartCalc(int startCalc) {
+		this.startCalc = startCalc;
 	}
 }

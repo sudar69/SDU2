@@ -1,7 +1,5 @@
 package com.sudar.java.controller;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
@@ -10,8 +8,6 @@ import com.sudar.java.marshaller.LoadXmlToObject;
 import com.sudar.java.marshaller.MarshallerToXML;
 import com.sudar.java.model.File;
 import com.sudar.java.model.FilesList;
-import com.sudar.java.model.Function;
-import com.sudar.java.model.FunctionsList;
 import com.sudar.java.view.FunctionView;
 
 public class FilesController {
@@ -46,6 +42,8 @@ public class FilesController {
 			getFirstFile(fl).getParameter().addTeta0();
 		} else if (validAction("save")) {
 			getFirstFile(fl).save(getMyGets());
+		} else if (validAction("startCalculation")) {
+			getFirstFile(fl).startCalculation();
 		}
 		
 		if (getFname() == null) {

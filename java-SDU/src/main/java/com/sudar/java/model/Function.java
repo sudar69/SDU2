@@ -165,7 +165,6 @@ public class Function {
 	}
 
 	public double eval(double x1) {
-		log.info("eval1");
 
 		if (x1 < getRow().get(0).getIndex())
 			return getRow().get(0).getColl().get(0).getCell().getValue();
@@ -185,7 +184,6 @@ public class Function {
 	}
 
 	public double eval(double x1, double x2) {
-		log.info("eval2");
 		int x1i = 0, x2i = 0;
 
 		if (x1 < getRow().get(0).getIndex()) {
@@ -218,7 +216,6 @@ public class Function {
 				}
 			}
 		}
-		log.info("x1i = " + x1i + ", x2i = " + x2i);
 
 		double x1p = (x1 - getRow().get(x1i).getIndex())
 				/ (getRow().get(x1i + 1).getIndex() - getRow().get(x1i).getIndex());

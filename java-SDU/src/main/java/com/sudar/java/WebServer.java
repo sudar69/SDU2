@@ -34,6 +34,10 @@ public class WebServer extends Thread {
 	public void start(int port) throws IOException {
 		@SuppressWarnings("resource")
 		ServerSocket s = new ServerSocket(port);
+		
+		Solver solver = new Solver();
+		solver.start();
+		
 		System.out.println("Web server listening on port " + port + " (press CTRL-C to quit)");
 		ExecutorService executor = Executors.newFixedThreadPool(N_THREADS);
 		while (true) {

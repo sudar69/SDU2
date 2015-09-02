@@ -62,7 +62,8 @@
 						<p align="center">
 							<input class="btn btn-default" type="submit" name="action"
 								value="save" />
-							<input type="submit" name="calculate" value="Начать вычисления" />
+							<input class="btn btn-default" type="submit" name="action"
+								value="startCalculation" />
 							<a class="btn btn-default" href="/?controller=files" role="button">Закрыть
 							</a>
 						</p>
@@ -572,9 +573,9 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="cx_delta_Mtau_file_">
-											<xsl:value-of select="cx_delta_Mtau_file" />
+											<xsl:value-of select="parameter/cxDeltaMtauFile" />
 										</xsl:variable>
-										<input type="text" name="cx_delta_Mtau_file" size="70"
+										<input type="text" name="cxDeltaMtauFile" size="70"
 											value="{$cx_delta_Mtau_file_}" />
 									</td>
 								</tr>
@@ -587,9 +588,9 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="cydelta_Mtau_file_">
-											<xsl:value-of select="cydelta_Mtau_file" />
+											<xsl:value-of select="parameter/cyDeltaMtauFile" />
 										</xsl:variable>
-										<input type="text" name="cydelta_Mtau_file" size="70"
+										<input type="text" name="cyDeltaMtauFile" size="70"
 											value="{$cydelta_Mtau_file_}" />
 									</td>
 								</tr>
@@ -602,9 +603,9 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="mzwz_Mtau_file_">
-											<xsl:value-of select="mzwz_Mtau_file" />
+											<xsl:value-of select="parameter/mzwzMtauFile" />
 										</xsl:variable>
-										<input type="text" name="mzwz_Mtau_file" size="70"
+										<input type="text" name="mzwzMtauFile" size="70"
 											value="{$mzwz_Mtau_file_}" />
 									</td>
 								</tr>
@@ -617,9 +618,9 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="mzdelta_Mtau_file_">
-											<xsl:value-of select="mzdelta_Mtau_file" />
+											<xsl:value-of select="parameter/mzdeltaMtauFile" />
 										</xsl:variable>
-										<input type="text" name="mzdelta_Mtau_file" size="70"
+										<input type="text" name="mzdeltaMtauFile" size="70"
 											value="{$mzdelta_Mtau_file_}" />
 									</td>
 								</tr>
@@ -632,9 +633,9 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="mxwx_Mtau_file_">
-											<xsl:value-of select="mxwx_Mtau_file" />
+											<xsl:value-of select="parameter/mxwxMtauFile" />
 										</xsl:variable>
-										<input type="text" name="mxwx_Mtau_file" size="70"
+										<input type="text" name="mxwxMtauFile" size="70"
 											value="{$mxwx_Mtau_file_}" />
 									</td>
 								</tr>
@@ -647,10 +648,139 @@
 									</td>
 									<td width="300">
 										<xsl:variable name="mxalpha_Mtau_file_">
-											<xsl:value-of select="mxalpha_Mtau_file" />
+											<xsl:value-of select="parameter/mxalphaMtauFile" />
 										</xsl:variable>
-										<input type="text" name="mxalpha_Mtau_file" size="70"
+										<input type="text" name="mxalphaMtauFile" size="70"
 											value="{$mxalpha_Mtau_file_}" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p align="center">
+							<strong>Параметры решателя СДУ </strong>
+						</p>
+						<table width="273" border="1" align="center">
+							<tbody>
+								<tr>
+									<td colspan="2">
+										<div align="center">1 этап </div>
+									</td>
+								</tr>
+								<tr>
+									<td wvalueth="92">
+										<div align="right">MaxStep</div>
+									</td>
+									<td wvalueth="165">
+										<label>
+											<xsl:variable name="maxStep1_">
+												<xsl:value-of select="parameter/maxStep1" />
+											</xsl:variable>
+											<input name="maxStep1" type="text" value="{$maxStep1_}" />
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">InitialStep</div>
+									</td>
+									<td>
+										<xsl:variable name="initialStep1_">
+											<xsl:value-of select="parameter/initialStep1" />
+										</xsl:variable>
+										<input name="initialStep1" type="text" value="{$initialStep1_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">RelTol</div>
+									</td>
+									<td>
+										<xsl:variable name="relTol1_">
+											<xsl:value-of select="parameter/relTol1" />
+										</xsl:variable>
+										<input name="relTol1" type="text" value="{$relTol1_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">AbsTol</div>
+									</td>
+									<td>
+										<xsl:variable name="absTol1_">
+											<xsl:value-of select="parameter/absTol1" />
+										</xsl:variable>
+										<input name="absTol1" type="text" value="{$absTol1_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">NormControl</div>
+									</td>
+									<td>
+										<select name="NormControl1">
+											<option value="on">on</option>
+											<option value="off" selected="">off</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<div align="center">2 этап </div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">MaxStep</div>
+									</td>
+									<td>
+										<xsl:variable name="maxStep2_">
+											<xsl:value-of select="parameter/maxStep2" />
+										</xsl:variable>
+										<input name="maxStep2" type="text" value="{$maxStep2_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">InitialStep</div>
+									</td>
+									<td>
+										<xsl:variable name="initialStep2_">
+											<xsl:value-of select="parameter/initialStep2" />
+										</xsl:variable>
+										<input name="initialStep2" type="text" value="{$initialStep2_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">RelTol</div>
+									</td>
+									<td>
+										<xsl:variable name="relTol2_">
+											<xsl:value-of select="parameter/relTol2" />
+										</xsl:variable>
+										<input name="relTol2" type="text" value="{$relTol2_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">AbsTol</div>
+									</td>
+									<td>
+										<xsl:variable name="absTol2_">
+											<xsl:value-of select="parameter/absTol2" />
+										</xsl:variable>
+										<input name="absTol2" type="text" value="{$absTol2_}" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="right">NormControl</div>
+									</td>
+									<td>
+										<select name="NormControl2">
+											<option value="on">on</option>
+											<option value="off" selected="">off</option>
+										</select>
 									</td>
 								</tr>
 							</tbody>

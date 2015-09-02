@@ -40,17 +40,33 @@ public class Parameter {
 
 	private List<ParamValue> valueConst = new ArrayList<ParamValue>();
 	
-	private String cx_delta_Mtau_file;
+	private String cxDeltaMtauFile = new String();
 	
-	private String cydelta_Mtau_file;
+	private String cyDeltaMtauFile = new String();
 	
-	private String mzwz_Mtau_file;
+	private String mzwzMtauFile = new String();
 	
-	private String mzdelta_Mtau_file;
+	private String mzdeltaMtauFile = new String();
 	
-	private String mxwx_Mtau_file;
+	private String mxwxMtauFile = new String();
 	
-	private String mxalpha_Mtau_file;
+	private String mxalphaMtauFile = new String();
+	
+	private double maxStep1 = 0.01;
+	
+	private double initialStep1 = 0.01;
+	
+	private double relTol1 = 1e-3;
+	
+	private double absTol1 = 1e-6;
+	
+	private double maxStep2 = 0.001;
+	
+	private double initialStep2 = 0.001;
+	
+	private double relTol2 = 1e-3;
+	
+	private double absTol2 = 1e-6;
 
 	public void addTeta0() {
 		Teta0 t = new Teta0();
@@ -292,28 +308,60 @@ public class Parameter {
 			}
 		}
 		
-		if (myGet.get("cx_delta_Mtau_file") != null) {
-			setCx_delta_Mtau_file(myGet.get("cx_delta_Mtau_file").toString());
+		if (myGet.get("cxDeltaMtauFile") != null) {
+			setCxDeltaMtauFile(myGet.get("cxDeltaMtauFile").toString());
 		}
 		
-		if (myGet.get("cydelta_Mtau_file") != null) {
-			setCydelta_Mtau_file(myGet.get("cydelta_Mtau_file").toString());
+		if (myGet.get("cyDeltaMtauFile") != null) {
+			setCyDeltaMtauFile(myGet.get("cyDeltaMtauFile").toString());
 		}
 		
-		if (myGet.get("mzwz_Mtau_file") != null) {
-			setMzwz_Mtau_file(myGet.get("mzwz_Mtau_file").toString());
+		if (myGet.get("mzwzMtauFile") != null) {
+			setMzwzMtauFile(myGet.get("mzwzMtauFile").toString());
 		}
 		
-		if (myGet.get("mzdelta_Mtau_file") != null) {
-			setMzdelta_Mtau_file(myGet.get("mzdelta_Mtau_file").toString());
+		if (myGet.get("mzdeltaMtauFile") != null) {
+			setMzdeltaMtauFile(myGet.get("mzdeltaMtauFile").toString());
 		}
 		
-		if (myGet.get("mxwx_Mtau_file") != null) {
-			setMxwx_Mtau_file(myGet.get("mxwx_Mtau_file").toString());
+		if (myGet.get("mxwxMtauFile") != null) {
+			setMxwxMtauFile(myGet.get("mxwxMtauFile").toString());
 		}
 		
-		if (myGet.get("mxalpha_Mtau_file") != null) {
-			setMxalpha_Mtau_file(myGet.get("mxalpha_Mtau_file").toString());
+		if (myGet.get("mxalphaMtauFile") != null) {
+			setMxalphaMtauFile(myGet.get("mxalphaMtauFile").toString());
+		}
+		
+		if (myGet.get("maxStep1") != null) {
+			setMaxStep1(Double.parseDouble(myGet.get("maxStep1").toString()));
+		}
+		
+		if (myGet.get("initialStep1") != null) {
+			setInitialStep1(Double.parseDouble(myGet.get("initialStep1").toString()));
+		}
+		
+		if (myGet.get("relTol1") != null) {
+			setRelTol1(Double.parseDouble(myGet.get("relTol1").toString()));
+		}
+		
+		if (myGet.get("absTol1") != null) {
+			setAbsTol1(Double.parseDouble(myGet.get("absTol1").toString()));
+		}
+		
+		if (myGet.get("maxStep2") != null) {
+			setMaxStep2(Double.parseDouble(myGet.get("maxStep2").toString()));
+		}
+		
+		if (myGet.get("initialStep2") != null) {
+			setInitialStep2(Double.parseDouble(myGet.get("initialStep2").toString()));
+		}
+		
+		if (myGet.get("relTol2") != null) {
+			setRelTol2(Double.parseDouble(myGet.get("relTol2").toString()));
+		}
+		
+		if (myGet.get("absTol2") != null) {
+			setAbsTol2(Double.parseDouble(myGet.get("absTol2").toString()));
 		}
 
 	}
@@ -438,52 +486,116 @@ public class Parameter {
 		this.valueConst = valueConst;
 	}
 
-	public String getCx_delta_Mtau_file() {
-		return cx_delta_Mtau_file;
+	public String getCxDeltaMtauFile() {
+		return cxDeltaMtauFile;
 	}
 
-	public void setCx_delta_Mtau_file(String cx_delta_Mtau_file) {
-		this.cx_delta_Mtau_file = cx_delta_Mtau_file;
+	public void setCxDeltaMtauFile(String cx_delta_Mtau_file) {
+		this.cxDeltaMtauFile = cx_delta_Mtau_file;
 	}
 
-	public String getCydelta_Mtau_file() {
-		return cydelta_Mtau_file;
+	public String getCyDeltaMtauFile() {
+		return cyDeltaMtauFile;
 	}
 
-	public void setCydelta_Mtau_file(String cydelta_Mtau_file) {
-		this.cydelta_Mtau_file = cydelta_Mtau_file;
+	public void setCyDeltaMtauFile(String cydelta_Mtau_file) {
+		this.cyDeltaMtauFile = cydelta_Mtau_file;
 	}
 
-	public String getMzwz_Mtau_file() {
-		return mzwz_Mtau_file;
+	public String getMzwzMtauFile() {
+		return mzwzMtauFile;
 	}
 
-	public void setMzwz_Mtau_file(String mzwz_Mtau_file) {
-		this.mzwz_Mtau_file = mzwz_Mtau_file;
+	public void setMzwzMtauFile(String mzwz_Mtau_file) {
+		this.mzwzMtauFile = mzwz_Mtau_file;
 	}
 
-	public String getMzdelta_Mtau_file() {
-		return mzdelta_Mtau_file;
+	public String getMzdeltaMtauFile() {
+		return mzdeltaMtauFile;
 	}
 
-	public void setMzdelta_Mtau_file(String mzdelta_Mtau_file) {
-		this.mzdelta_Mtau_file = mzdelta_Mtau_file;
+	public void setMzdeltaMtauFile(String mzdelta_Mtau_file) {
+		this.mzdeltaMtauFile = mzdelta_Mtau_file;
 	}
 
-	public String getMxwx_Mtau_file() {
-		return mxwx_Mtau_file;
+	public String getMxwxMtauFile() {
+		return mxwxMtauFile;
 	}
 
-	public void setMxwx_Mtau_file(String mxwx_Mtau_file) {
-		this.mxwx_Mtau_file = mxwx_Mtau_file;
+	public void setMxwxMtauFile(String mxwx_Mtau_file) {
+		this.mxwxMtauFile = mxwx_Mtau_file;
 	}
 
-	public String getMxalpha_Mtau_file() {
-		return mxalpha_Mtau_file;
+	public String getMxalphaMtauFile() {
+		return mxalphaMtauFile;
 	}
 
-	public void setMxalpha_Mtau_file(String mxalpha_Mtau_file) {
-		this.mxalpha_Mtau_file = mxalpha_Mtau_file;
+	public void setMxalphaMtauFile(String mxalpha_Mtau_file) {
+		this.mxalphaMtauFile = mxalpha_Mtau_file;
+	}
+
+	public double getMaxStep1() {
+		return maxStep1;
+	}
+
+	public void setMaxStep1(double maxStep1) {
+		this.maxStep1 = maxStep1;
+	}
+
+	public double getInitialStep1() {
+		return initialStep1;
+	}
+
+	public void setInitialStep1(double initialStep1) {
+		this.initialStep1 = initialStep1;
+	}
+
+	public double getRelTol1() {
+		return relTol1;
+	}
+
+	public void setRelTol1(double relTol1) {
+		this.relTol1 = relTol1;
+	}
+
+	public double getAbsTol1() {
+		return absTol1;
+	}
+
+	public void setAbsTol1(double absTol1) {
+		this.absTol1 = absTol1;
+	}
+
+	public double getMaxStep2() {
+		return maxStep2;
+	}
+
+	public void setMaxStep2(double maxStep2) {
+		this.maxStep2 = maxStep2;
+	}
+
+	public double getInitialStep2() {
+		return initialStep2;
+	}
+
+	public void setInitialStep2(double initialStep2) {
+		this.initialStep2 = initialStep2;
+	}
+
+	public double getRelTol2() {
+		return relTol2;
+	}
+
+	public void setRelTol2(double relTol2) {
+		this.relTol2 = relTol2;
+	}
+
+	public double getAbsTol2() {
+		return absTol2;
+	}
+
+	public void setAbsTol2(double absTol2) {
+		this.absTol2 = absTol2;
 	}
 
 }

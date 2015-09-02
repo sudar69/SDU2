@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>Untitled Document</title>
+				<title>Theard</title>
 			</head>
 			<body bgcolor="#FFFFFF" text="#000000">
 				<table width="400" border="0" cellspacing="0" cellpadding="0"
@@ -19,6 +19,22 @@
 									<a href="{$NAME}">
 										<xsl:value-of select="title" />
 									</a>
+								</p>
+							</td>
+						</tr>
+					</xsl:for-each>
+				</table>
+				<p><xsl:value-of select="menu/countFiles" /></p>
+				<table width="400" border="1" cellspacing="0" cellpadding="0"
+					align="center">
+					<xsl:for-each select="menu/file">
+						<tr>
+							<td>
+								<xsl:variable name="title_">
+									<xsl:value-of select="parameter/title" />
+								</xsl:variable>
+								<p>
+									<xsl:value-of select="parameter/title" />
 								</p>
 							</td>
 						</tr>
